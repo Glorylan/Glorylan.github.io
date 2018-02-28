@@ -15,12 +15,12 @@
 <meta property="og:url" content="//helloblues.club/2018/02/28/git笔记整理/index.html">
 <meta property="og:site_name" content="Blues的博客">
 <meta property="og:description" content="git add 提交修改到暂存区，git commit 修改提交到分支。版本回退：git reset –hard HEAD^读取当前文本内容： cat readme.txt(file)操作记录：git log(电脑重启后)记录commit_id 的数据：git reflog任意版本之间的跳转：git reset –hard commit_id具体做的修改：git diff HEAD – read">
-<meta property="og:image" content="//helloblues.club/assets/blogImg/git-note.jpg">
-<meta property="og:updated_time" content="2018-02-28T06:15:38.521Z">
+<meta property="og:image" content="//helloblues.club/assets/blogImg/git-note.jpeg">
+<meta property="og:updated_time" content="2018-02-28T06:27:47.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git笔记">
 <meta name="twitter:description" content="git add 提交修改到暂存区，git commit 修改提交到分支。版本回退：git reset –hard HEAD^读取当前文本内容： cat readme.txt(file)操作记录：git log(电脑重启后)记录commit_id 的数据：git reflog任意版本之间的跳转：git reset –hard commit_id具体做的修改：git diff HEAD – read">
-<meta name="twitter:image" content="//helloblues.club/assets/blogImg/git-note.jpg">
+<meta name="twitter:image" content="//helloblues.club/assets/blogImg/git-note.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Blues的博客" type="application/atom+xml">
   
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/git-note.jpg" alt=""></p>
+        <p><img src="/assets/blogImg/git-note.jpeg" alt=""></p>
 <p>git add 提交修改到暂存区，git commit 修改提交到分支。<br>版本回退：git reset –hard HEAD^<br>读取当前文本内容： cat readme.txt(file)<br>操作记录：git log<br>(电脑重启后)记录commit_id 的数据：git reflog<br>任意版本之间的跳转：git reset –hard commit_id<br>具体做的修改：git diff HEAD – readme.txt(file)<br>(1)撤销未提交的修改：git checkout – file(文件名)<br>撤销已提交的修改：git reset HEAD file 后再执行步骤(1)<br>删除文件：git rm file(文件名.后缀)<br>误删操作：（不需要操作的文件先转移）版本替换 git reset - commit_id 即可</p>
 <p>将本地库克隆到GitHub步骤：<br>第一：关联库(在库目录下)git remote add origin git@github.com:glorylan/gitrepository(库名).git origin为远程库的名字(GitHub默认叫法)<br>第二：本地所有内容推送到远程库上：git push -u origin master (-u为第一次提交用，之后不写)<br>从远程库克隆：<br>git clone git@github.com:glorylan/gitskills.git (默认的git://使用ssh，速度最快) 或者<br>git clone <a href="https://github.com/glorylan/gitskills.git(一般使用方式，缺点是速度慢，推送需口令" target="_blank" rel="noopener">https://github.com/glorylan/gitskills.git(一般使用方式，缺点是速度慢，推送需口令</a>)</p>
 <p>分支创建：<br>git checkout -b dev (-b表示创建并切换，dev是新分支名称)<br>查看当前分支：git branch<br>分支切换：git checkout master(分支名)<br>分支合并：git merge dev (git merge命令用于指定分支到当前分支)<br>删除分支：git checkout -d dev (删除dev分支)<br>查看分支合并图：git log –graph –pretty=oneline –abbrev-commit<br>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
@@ -392,10 +392,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旧事</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
