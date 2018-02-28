@@ -187,11 +187,9 @@ var _hmt = _hmt || [];
       
         <p><img src="/assets/blogImg/git-note.jpeg" alt=""></p>
 <p>git add 提交修改到暂存区，git commit 修改提交到分支。<br>版本回退：git reset –hard HEAD^<br>读取当前文本内容： cat readme.txt(file)<br>操作记录：git log<br>(电脑重启后)记录commit_id 的数据：git reflog<br>任意版本之间的跳转：git reset –hard commit_id<br>具体做的修改：git diff HEAD – readme.txt(file)<br>(1)撤销未提交的修改：git checkout – file(文件名)<br>撤销已提交的修改：git reset HEAD file 后再执行步骤(1)<br>删除文件：git rm file(文件名.后缀)<br>误删操作：（不需要操作的文件先转移）版本替换 git reset - commit_id 即可</p>
-<p>将本地库克隆到GitHub步骤：<br>第一：关联库(在库目录下)git remote add origin git@github.com:glorylan/gitrepository(库名).git origin为远程库的名字(GitHub默认叫法)<br>第二：本地所有内容推送到远程库上：git push -u origin master (-u为第一次提交用，之后不写)<br>从远程库克隆：<br>git clone git@github.com:glorylan/gitskills.git (默认的git://使用ssh，速度最快) 或者<br>git clone <a href="https://github.com/glorylan/gitskills.git(一般使用方式，缺点是速度慢，推送需口令" target="_blank" rel="noopener">https://github.com/glorylan/gitskills.git(一般使用方式，缺点是速度慢，推送需口令</a>)</p>
-<p>分支创建：<br>git checkout -b dev (-b表示创建并切换，dev是新分支名称)<br>查看当前分支：git branch<br>分支切换：git checkout master(分支名)<br>分支合并：git merge dev (git merge命令用于指定分支到当前分支)<br>删除分支：git checkout -d dev (删除dev分支)<br>查看分支合并图：git log –graph –pretty=oneline –abbrev-commit<br>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
-<p>当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。（git status状态下为clean）<br>git stash “存储”起来的工作区可以通过 git stash list 查看<br>强行删除一个分支上已经add commit 但是还未merge的项目：git branch -D filename(文件名)</p>
-<p>创建标签：<br>切换到需要打标签的分支上：git tag v1.0 进行创建，v1.0为标签号 (git tag可以查看所有的标签)<br>跳到指定地方打标签：git tag v1.1 commit_id<br>注意：标签不是按照时间顺序列出，而是按字母排序的。可以用 git show 查看标签信息<br>创建带有说明的标签，用-a指定标签名，-m指定说明文字：<br>$ git tag -a v0.1 -m “version 0.1 released” 3628164<br>可以用PGP签名标签 :git tag -s -m “blablabla…”<br>命令 git push origin 可以推送一个本地标签；<br>命令 git push origin –tags 可以推送全部未推送过的本地标签；<br>命令 git tag -d 可以删除一个本地标签；<br>命令git push origin :refs/tags/ 可以删除一个远程标签；</p>
-
+        
+          <a class="article-more-a" href="/2018/02/28/git笔记整理/#more">more >></a>
+        
       
 
       
